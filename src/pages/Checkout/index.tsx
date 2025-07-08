@@ -64,7 +64,7 @@ const Checkout = () => {
         .email('E-mail inválido')
         .required('O campo é obrigatorio'),
       confirmDeliveryEmail: Yup.string()
-        .oneOf([Yup.ref('delivaryEmail')], 'Os e-mails são diferentes')
+        .oneOf([Yup.ref('deliveryEmail')], 'Os e-mails são diferentes')
         .required('O campo é obrigatorio'),
 
       cardOwner: Yup.string().when((values, schema) =>
@@ -267,7 +267,7 @@ const Checkout = () => {
                   <input
                     type="email"
                     id="confirmdeliveryEmail"
-                    name="confirmdeliveryEmail"
+                    name="confirmDeliveryEmail"
                     value={form.values.confirmDeliveryEmail}
                     onChange={form.handleChange}
                     onBlur={form.handleBlur}
